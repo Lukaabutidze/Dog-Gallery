@@ -1,11 +1,9 @@
 "use client";
 import { useState } from "react";
-
 import React from "react";
 import Selector from "./components/Selector";
 import Button from "./components/Button";
-
-const handleFetch = async () => {};
+import { fetchDogs } from "./actions";
 
 const DogsPage = () => {
   const [numberOfDogs, setNumberOfDogs] = useState(1);
@@ -14,6 +12,8 @@ const DogsPage = () => {
   const handleFetch = async () => {
     setDogImages(await fetchDogs(numberOfDogs));
   };
+
+  console.log({ dogImages });
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-white dark:bg-gray-800">
