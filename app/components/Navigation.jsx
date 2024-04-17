@@ -18,13 +18,19 @@ export default function Navigation() {
       <div
         className={`${
           isOpen ? "translate-x-0 shadow-xl" : "-translate-x-full"
-        } fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 p-10 transition-transform z-40`}
+        }  mt-5 fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 p-10 transition-transform z-40`}
       >
         {/* Navigation Links */}
-        <Link href="/" className="block p-4 text-black dark:text-white">
+        <Link
+          href="/"
+          className="block p-4 text-black dark:text-white hover:opacity-50"
+        >
           Home
         </Link>
-        <Link href="/all-dogs" className="block p-4 text-black dark:text-white">
+        <Link
+          href="/all-dogs"
+          className="block p-4 text-black dark:text-white hover:opacity-50"
+        >
           See all dogs
         </Link>
       </div>

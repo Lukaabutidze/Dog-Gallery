@@ -6,7 +6,7 @@ export default function DogGallery({ dogImages }) {
       {dogImages.map((image) => (
         <div
           key={image}
-          className="min-w-[240px] sm:min-w-[300px] md:min-w-[400px] lg:min-w-[500px] rounded-lg shadow-lg dark:shadow-gray-700/50 relative"
+          className="min-w-[240px] sm:min-w-[300px] md:min-w-[400px] lg:min-w-[500px] rounded-lg shadow-lg dark:shadow-gray-700/50 relative  hover:opacity-80 cursor-pointer"
           style={{ minHeight: "300px" }}
         >
           <Image
