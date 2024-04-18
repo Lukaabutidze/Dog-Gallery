@@ -5,6 +5,10 @@ import { useState } from "react";
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="absolute">
       <button onClick={() => setIsOpen(!isOpen)} className="p-4 z-50 relative">
@@ -24,12 +28,14 @@ export default function Navigation() {
         <Link
           href="/"
           className="block p-4 text-black dark:text-white hover:opacity-50"
+          onClick={closeMenu}
         >
           Home
         </Link>
         <Link
           href="/all-dogs"
           className="block p-4 text-black dark:text-white hover:opacity-50"
+          onClick={closeMenu}
         >
           See all dogs
         </Link>

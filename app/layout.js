@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Lora } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 
-const inter = Inter({ subsets: ["latin"] });
+const lora = Lora({ weight: "500", subsets: ["latin"] });
 
 export const metadata = {
   title: "Dog Gallery",
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={lora.className}>
         <Navigation />
 
         {children}
